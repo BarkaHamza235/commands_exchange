@@ -1,0 +1,25 @@
+1. .NET Framework 8.0:
+https://dotnet.microsoft.com/en-us/download
+
+2. Visual C++ Redistributable Package for Visual Studio 2022 :
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+3. Unified Communications Managed API 6.0:
+https://www.microsoft.com/en-us/download/details.aspx?id=57507&msockid=010aca735284697601bbde07536f6855
+
+4. URL Rewrite :
+https://www.iis.net/downloads/microsoft/url-rewrite
+
+5. Download Exchange Server 2019 Update 14 :
+https://www.microsoft.com/en-sa/download/details.aspx?id=105878&msockid=010aca735284697601bbde07536f6855
+
+
+PowerShell cmdlet to install the required Windows Roles and Features:
+
+Install-WindowsFeature Server-Media-Foundation, NET-Framework-45-Features, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-Mgmt, RSAT-Clustering-PowerShell, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, Windows-Identity-Foundation, RSAT-ADDS
+
+.\Setup.EXE IAcceptExchangeServerLicenseTerms /PrepareSchema
+
+.\Setup.EXE IAcceptExchangeServerLicenseTerms /PrepareAD /OrganizationName:"BHB-workstation"
+
+.\Setup.EXE IAcceptExchangeServerLicenseTerms /PrepareAllDomains
